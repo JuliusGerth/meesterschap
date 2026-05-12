@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Weekly Nerd #4 — Robbert Broersma</title>
+    <link rel="stylesheet" href="../style.css">
+    <link rel="stylesheet" href="nerd.css">
+</head>
+<body>
+
+    <nav>
+        <ul>
+            <li><a href="../index.html#over-mij">Over mij →</a></li>
+            <li><a href="../index.html#weekly-nerds">Weekly Nerds →</a></li>
+            <li><a href="../index.html#projecten">Projecten →</a></li>
+            <li><a href="../index.html#reflectie">Leerdoelen & Reflectie →</a></li>
+        </ul>
+    </nav>
+
+    <main class="nerd-page">
+
+        <a class="back-link" href="../index.html#weekly-nerds">← Terug naar Weekly Nerds</a>
+
+        <header class="nerd-header">
+            <p class="nerd-nummer">Weekly Nerd #4</p>
+            <h1>Robbert Broersma</h1>
+            <p class="nerd-meta">Formulieren — Das Pas Makkelijk! (NL Design System)</p>
+        </header>
+
+        <article class="nerd-content">
+
+            <section>
+                <h2>Opbouw van een formulier</h2>
+                <ol>
+                    <li>Introductietekst</li>
+                    <li>Alleen de informatie vragen die nodig is</li>
+                    <li>De gebruiker kan voor inzending de ingevoerde waarden controleren, wijzigen of ongedaan maken</li>
+                    <li>Na "volgende" of "verzenden" verschijnt een samenvatting van alle fouten</li>
+                    <li>Na verzenden verschijnt een duidelijke bevestiging</li>
+                </ol>
+            </section>
+
+            <section>
+                <h2>Inhoud van een formulier</h2>
+                <ul>
+                    <li>Alleen informatie vragen die nodig is</li>
+                    <li>Verplichte velden goed aangeven</li>
+                    <li>Uitleggen waarom je specifieke informatie nodig hebt</li>
+                    <li>Gebruiker dezelfde informatie niet twee keer vragen</li>
+                    <li>Geen jargon of rare afkortingen gebruiken</li>
+                </ul>
+            </section>
+
+            <section>
+                <h2>Design van de componenten</h2>
+                <ul>
+                    <li>Check het kleurcontrast van componenten</li>
+                    <li>Check het kleurcontrast van subtielere tekst</li>
+                    <li>Zijn de componenten groot genoeg? <strong>44px × 44px</strong> is gebruikersvriendelijk</li>
+                </ul>
+            </section>
+
+            <section>
+                <h2>Design van het formulier</h2>
+                <ul>
+                    <li>Buttons staan aan het begin van de regel, niet aan het eind</li>
+                    <li>De voortgang wordt getoond boven aan het formulier in tekst, bijv. "Stap 2 van 4"</li>
+                    <li>De navigatie is consistent in elke stap</li>
+                    <li>Het is duidelijk bij welke stap het formulier daadwerkelijk verzonden wordt</li>
+                    <li>Elk invoerveld heeft een zichtbaar label <em>boven</em> het invoerveld</li>
+                    <li>Er staat "verplicht" of "niet verplicht" in tekst — niet met een *</li>
+                </ul>
+            </section>
+
+            <section>
+                <h2>Flow van het formulier</h2>
+                <ul>
+                    <li>Formuliervelden staan in een logische volgorde</li>
+                    <li>Er zijn meerdere contactmogelijkheden beschikbaar</li>
+                    <li>Hulp wordt op meerdere plekken aangeboden</li>
+                    <li>Voortgang wordt getoond boven het formulier in tekst</li>
+                </ul>
+            </section>
+
+            <section>
+                <h2>Makkelijker invullen</h2>
+                <ul>
+                    <li>Als de gebruiker is ingelogd, vul alvast bekende gegevens in</li>
+                    <li>Knippen en plakken is toegestaan</li>
+                    <li>Controleer of de browser autocomplete aanbiedt waar verwacht</li>
+                </ul>
+            </section>
+
+            <section>
+                <h2>Beschrijving bij een veld</h2>
+                <ul>
+                    <li>Belangrijke uitleg altijd zichtbaar</li>
+                    <li>Extra teksten zijn gekoppeld met <code>aria-describedby</code></li>
+                    <li>Foutmeldingen zijn duidelijk beschreven</li>
+                    <li>Feedback zoals "42 van de 100 tekens"</li>
+                    <li>Beschrijving en foutmelding bij een checkbox zijn ook gekoppeld</li>
+                </ul>
+            </section>
+
+            <section>
+                <h2>Controleren & Validatie</h2>
+                <ul>
+                    <li>De laatste stap toont een samenvatting van alle ingevoerde gegevens</li>
+                    <li>Het formulier biedt de mogelijkheid om de inzending te controleren</li>
+                    <li>Gebruik <code>bdi translate="no"</code> om te voorkomen dat ingevoerde gegevens worden vertaald</li>
+                    <li>De regels voor een invoerveld zijn vooraf duidelijk</li>
+                    <li>Invoervelden hebben geen onnodig minimum of maximum</li>
+                </ul>
+            </section>
+
+            <section>
+                <h2>Toetsenbord</h2>
+                <p>Een goed formulier moet volledig zonder muis ingevuld kunnen worden. De focus indicator moet goed en duidelijk zichtbaar zijn voor toetsenbordgebruikers.</p>
+            </section>
+
+        </article>
+
+    </main>
+
+    <footer>
+        <p>Julius Gerth — CMD Amsterdam 2026</p>
+    </footer>
+
+</body>
+</html>

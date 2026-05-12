@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Weekly Nerd #3 — Kilian Valkhof</title>
+    <link rel="stylesheet" href="../style.css">
+    <link rel="stylesheet" href="nerd.css">
+</head>
+<body>
+
+    <nav>
+        <ul>
+            <li><a href="../index.html#over-mij">Over mij →</a></li>
+            <li><a href="../index.html#weekly-nerds">Weekly Nerds →</a></li>
+            <li><a href="../index.html#projecten">Projecten →</a></li>
+            <li><a href="../index.html#reflectie">Leerdoelen & Reflectie →</a></li>
+        </ul>
+    </nav>
+
+    <main class="nerd-page">
+
+        <a class="back-link" href="../index.html#weekly-nerds">← Terug naar Weekly Nerds</a>
+
+        <header class="nerd-header">
+            <p class="nerd-nummer">Weekly Nerd #3</p>
+            <h1>Kilian Valkhof</h1>
+            <p class="nerd-meta">Stop Using JavaScript for That — Moving Features from JS to CSS & HTML</p>
+        </header>
+
+        <article class="nerd-content">
+
+            <section>
+                <h2>The Rule of Least Power</h2>
+                <p>Bedacht door het W3C: als je iets gaat bouwen, moet je kijken of je het kan maken in de minst krachtige taal. Declaratieve talen zoals HTML en CSS zijn hierbij de voorkeur — jij bepaalt het eindproduct en de browser regelt de rest.</p>
+                <p>Browserfabrikanten luisteren actief naar waar developers JavaScript voor gebruiken, om die gaten te vullen met native HTML en CSS oplossingen.</p>
+                <p>Het contract met het web: alles wat ooit werkte, moet voor altijd ondersteund blijven worden.</p>
+            </section>
+
+            <section>
+                <h2>Custom Switches zonder JavaScript</h2>
+                <p>Een custom toggle switch kan je maken met een gewone checkbox:</p>
+                <pre><code>&lt;label&gt;
+    &lt;input type="checkbox" /&gt;
+    My awesome feature
+&lt;/label&gt;</code></pre>
+                <pre><code>input {
+    appearance: none; /* verwijdert browser-styling */
+}
+
+input:checked {
+    background: green;
+}
+
+input:checked::before {
+    transform: translateX(1rem);
+}</code></pre>
+
+                <h3>Focus zichtbaar maken</h3>
+                <pre><code>input:focus-visible {
+    outline: 2px solid dodgerblue;
+    outline-offset: 2px;
+}
+
+input:focus {
+    /* niet: */
+    /* outline: none; */
+
+    /* wel: */
+    outline-color: transparent;
+}</code></pre>
+            </section>
+
+            <section>
+                <h2>Smooth Scroll zonder JavaScript</h2>
+                <pre><code>html {
+    scroll-behavior: smooth;
+}</code></pre>
+                <p>De browser berekent alles zelf, inclusief snelheid en hoe krachtig het apparaat is. Toegankelijker dan JS-scroll, want de browser houdt rekening met systeemvoorkeuren.</p>
+                <pre><code>@media (prefers-reduced-motion: no-preference) {
+    html {
+        scroll-behavior: smooth;
+    }
+}</code></pre>
+                <p>Zo krijgen alleen gebruikers die géén voorkeur hebben voor minder beweging de animatie te zien.</p>
+
+                <h3>Scroll margin</h3>
+                <pre><code>#my-target {
+    scroll-margin-top: 100px;
+}
+
+#my-target:target {
+    outline: 10px solid deeppink;
+    transition: 1s ease-in-out outline;
+}</code></pre>
+            </section>
+
+            <section>
+                <h2>Accordions met &lt;details&gt;</h2>
+                <pre><code>&lt;details&gt;
+    &lt;summary&gt;Hier is mijn titel&lt;/summary&gt;
+    &lt;p&gt;Lorem ipsum...&lt;/p&gt;
+&lt;/details&gt;</code></pre>
+                <pre><code>summary::marker {
+    font-size: 1.5em;
+    content: '▶';
+}
+
+[open] summary::marker {
+    content: '▼';
+}
+
+summary:hover {
+    cursor: pointer;
+    background: deeppink;
+}</code></pre>
+                <p>Je kunt meerdere <code>&lt;details&gt;</code> elementen dezelfde naam geven zodat er maar één tegelijk open kan zijn — net als een accordion.</p>
+            </section>
+
+            <section>
+                <h2>Dialogs</h2>
+                <pre><code>&lt;dialog&gt;
+    &lt;form method="dialog"&gt;
+        &lt;h1&gt;Mijn dialog&lt;/h1&gt;
+    &lt;/form&gt;
+&lt;/dialog&gt;</code></pre>
+                <p>Het <strong>top-layer</strong> is een nieuwe laag tussen de website en het scherm van de gebruiker — perfect voor modals en dialogs zonder z-index gedoe.</p>
+            </section>
+
+            <section>
+                <h2>Field Sizing</h2>
+                <pre><code>input,
+textarea {
+    field-sizing: content;
+}</code></pre>
+                <p>Hiermee past een input of textarea zich automatisch aan de inhoud aan.</p>
+            </section>
+
+        </article>
+
+    </main>
+
+    <footer>
+        <p>Julius Gerth — CMD Amsterdam 2026</p>
+    </footer>
+
+</body>
+</html>

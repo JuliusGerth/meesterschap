@@ -1,0 +1,642 @@
+@import url('https://fonts.googleapis.com/css2?family=Oswald:wght@300;400;600;700&family=Raleway:ital,wght@0,300;0,400;1,300&display=swap');
+
+:root {
+    --yellow: #FFE81F;
+    --yellow-dim: #c9b800;
+    --bg: #000;
+    --bg-panel: #0a0a12;
+    --text: #d4d0c8;
+    --text-bright: #ffffff;
+    --glow-yellow: 0 0 6px #FFE81F, 0 0 20px #FFE81F, 0 0 40px #c9b800;
+    --glow-yellow-soft: 0 0 4px #FFE81F88, 0 0 12px #FFE81F44;
+    --border-radius: 3px;
+}
+
+/* ============================
+   Reset & Base
+   ============================ */
+
+*, *::before, *::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+    scrollbar-color: var(--yellow-dim) #222;
+}
+
+body {
+    width: 100dvw;
+    min-height: 100vh;
+    font-family: 'Raleway', Helvetica, sans-serif;
+    font-weight: 300;
+    background-color: var(--bg);
+    color: var(--text);
+    overflow-x: hidden;
+}
+
+body::before {
+    content: '';
+    position: fixed;
+    inset: 0;
+    z-index: -1;
+    background-image:
+        radial-gradient(1px 1px at 10% 8%,  #fff, transparent),
+        radial-gradient(1px 1px at 23% 44%, #fff, transparent),
+        radial-gradient(1px 1px at 37% 19%, #fff, transparent),
+        radial-gradient(1px 1px at 52% 72%, #fff, transparent),
+        radial-gradient(1px 1px at 65% 33%, #fff, transparent),
+        radial-gradient(1px 1px at 78% 57%, #fff, transparent),
+        radial-gradient(1px 1px at 88% 12%, #fff, transparent),
+        radial-gradient(1px 1px at 94% 85%, #fff, transparent),
+        radial-gradient(1px 1px at 5%  61%, #fff, transparent),
+        radial-gradient(1px 1px at 17% 91%, #fff, transparent),
+        radial-gradient(1px 1px at 44% 5%,  #fff, transparent),
+        radial-gradient(1px 1px at 59% 48%, #fff, transparent),
+        radial-gradient(1px 1px at 72% 79%, #fff, transparent),
+        radial-gradient(1px 1px at 83% 26%, #fff, transparent),
+        radial-gradient(1px 1px at 30% 67%, #fff, transparent),
+        radial-gradient(1px 1px at 48% 93%, #fff, transparent),
+        radial-gradient(1px 1px at 91% 40%, #fff, transparent),
+        radial-gradient(1px 1px at 7%  29%, #fffa, transparent),
+        radial-gradient(1px 1px at 55% 14%, #fffa, transparent),
+        radial-gradient(1px 1px at 68% 62%, #fffa, transparent),
+        radial-gradient(1px 1px at 14% 76%, #fffa, transparent),
+        radial-gradient(1px 1px at 40% 38%, #fffa, transparent),
+        radial-gradient(1px 1px at 97% 53%, #fffa, transparent),
+        radial-gradient(1px 1px at 26% 82%, #fffa, transparent),
+        radial-gradient(1px 1px at 81% 96%, #fffa, transparent),
+        radial-gradient(1px 1px at 3%  47%, #fff6, transparent),
+        radial-gradient(1px 1px at 35% 59%, #fff6, transparent),
+        radial-gradient(1px 1px at 62% 23%, #fff6, transparent),
+        radial-gradient(1px 1px at 76% 88%, #fff6, transparent),
+        radial-gradient(1px 1px at 89% 7%,  #fff6, transparent);
+    background-size: 500px 500px;
+    background-repeat: repeat;
+}
+
+/* ============================
+   Nav — mobile first
+   ============================ */
+
+nav {
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    width: 100%;
+    background: rgba(0, 0, 0, 0.92);
+    border-bottom: 1px solid var(--yellow);
+    box-shadow: 0 2px 20px #FFE81F22;
+    backdrop-filter: blur(6px);
+    padding: 0 1rem;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 0;
+    padding: 0.4rem 0;
+    height: auto;
+}
+
+nav li a {
+    display: block;
+    padding: 0.4rem 0.7rem;
+    font-family: 'Oswald', sans-serif;
+    font-weight: 400;
+    font-size: 0.72rem;
+    letter-spacing: 1.5px;
+    text-transform: uppercase;
+    color: var(--text);
+    text-decoration: none;
+    transition: color 0.2s, background 0.2s;
+    line-height: 1.4;
+}
+
+nav li a:hover {
+    color: var(--yellow);
+    background: rgba(255, 232, 31, 0.06);
+    text-shadow: var(--glow-yellow-soft);
+}
+
+/* ============================
+   Header — mobile first
+   ============================ */
+
+header {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 3rem 1.5rem 2.5rem;
+    text-align: center;
+    gap: 1.5rem;
+}
+
+header h1 {
+    font-family: 'Oswald', sans-serif;
+    font-weight: 700;
+    font-size: clamp(1.2rem, 6vw, 6rem);
+    letter-spacing: 4px;
+    text-transform: uppercase;
+    color: var(--yellow);
+    text-shadow: var(--glow-yellow);
+    line-height: 1.2;
+}
+
+header h2 {
+    font-family: 'Oswald', sans-serif;
+    font-weight: 300;
+    font-size: clamp(1rem, 4vw, 2rem);
+    letter-spacing: 6px;
+    text-transform: uppercase;
+    color: var(--text);
+    text-shadow: none;
+    margin: 0;
+}
+
+header img {
+    height: 120px;
+    object-fit: contain;
+    filter: drop-shadow(0 0 12px #FFE81F66);
+}
+
+/* ============================
+   Main & Dividers
+   ============================ */
+
+main {
+    width: 100%;
+}
+
+hr {
+    border: none;
+    border-top: 1px solid var(--yellow-dim);
+    box-shadow: var(--glow-yellow-soft);
+    width: 85%;
+    margin: 4rem auto;
+}
+
+/* ============================
+   Typography
+   ============================ */
+
+h2 {
+    font-family: 'Oswald', sans-serif;
+    font-weight: 600;
+    font-size: 2rem;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    color: var(--yellow);
+    text-shadow: var(--glow-yellow-soft);
+    margin-bottom: 1rem;
+}
+
+h3 {
+    font-family: 'Oswald', sans-serif;
+    font-weight: 400;
+    font-size: 1rem;
+    letter-spacing: 1.5px;
+    text-transform: uppercase;
+    color: var(--text-bright);
+    margin-bottom: 0.4rem;
+}
+
+p {
+    font-weight: 300;
+    line-height: 1.8;
+    color: var(--text);
+}
+
+a {
+    color: var(--yellow);
+    text-decoration: none;
+    transition: text-shadow 0.2s;
+}
+
+a:hover {
+    text-shadow: var(--glow-yellow-soft);
+    text-decoration: underline;
+}
+
+/* ============================
+   Popover / Project preview
+   ============================ */
+
+.popover-trigger {
+    cursor: pointer;
+    transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.popover-trigger:hover {
+    transform: scale(1.04);
+    box-shadow: 0 0 24px #FFE81F44;
+}
+
+.overlay {
+    position: fixed;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.72);
+    z-index: 9998;
+    display: none;
+    backdrop-filter: blur(5px);
+}
+
+.popover {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 9999;
+    display: none;
+    border-radius: var(--border-radius);
+    overflow: hidden;
+    box-shadow: 0 8px 60px rgba(0, 0, 0, 0.7), 0 0 0 1px var(--yellow-dim);
+}
+
+.popover iframe {
+    width: 100%;
+    height: 100%;
+    border: none;
+    display: block;
+}
+
+.repo-link {
+    font-family: 'Oswald', sans-serif;
+    font-size: 0.75rem;
+    letter-spacing: 1.5px;
+    text-transform: uppercase;
+    color: var(--yellow);
+    text-decoration: none;
+    transition: text-shadow 0.2s;
+}
+
+.repo-link:hover {
+    text-shadow: var(--glow-yellow-soft);
+    text-decoration: underline;
+}
+
+.popover.desktop {
+    width: 95dvw;
+    height: 82dvh;
+}
+
+.popover.phone {
+    width: 85dvw;
+    height: 82dvh;
+}
+
+.close-btn {
+    position: absolute;
+    top: -2.2rem;
+    right: 0;
+    font-family: 'Oswald', sans-serif;
+    font-size: 0.7rem;
+    letter-spacing: 1.5px;
+    text-transform: uppercase;
+    background: crimson;
+    color: white;
+    border: none;
+    padding: 5px 10px;
+    border-radius: var(--border-radius);
+    cursor: pointer;
+    z-index: 10000;
+    transition: background 0.2s;
+}
+
+.close-btn:hover {
+    background: #8b0000;
+}
+
+.no-scroll {
+    overflow: hidden;
+}
+
+/* ============================
+   Over Mij — mobile first
+   ============================ */
+
+#over-mij {
+    width: 90%;
+    margin: 3rem auto;
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+    scroll-margin-top: 80px;
+}
+
+#over-mij p {
+    font-size: 1rem;
+    width: 100%;
+}
+
+#over-mij a {
+    display: inline-block;
+    margin-top: 1rem;
+    font-family: 'Oswald', sans-serif;
+    font-size: 0.8rem;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    color: var(--yellow);
+    border: 1px solid var(--yellow-dim);
+    padding: 0.5rem 1.2rem;
+    transition: background 0.2s, box-shadow 0.2s;
+}
+
+#over-mij a:hover {
+    background: rgba(255, 232, 31, 0.1);
+    box-shadow: var(--glow-yellow-soft);
+    text-decoration: none;
+}
+
+/* ============================
+   Weekly Nerds — mobile first
+   ============================ */
+
+#weekly-nerds {
+    width: 90%;
+    margin: 0 auto;
+    scroll-margin-top: 80px;
+}
+
+#weekly-nerds > p {
+    margin-bottom: 2rem;
+    font-size: 0.95rem;
+}
+
+.cards {
+    list-style: none;
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 1.2rem;
+}
+
+.card article {
+    display: flex;
+    flex-direction: column;
+    gap: 0.4rem;
+    border: 1px solid #ffffff11;
+    border-top: 2px solid var(--yellow-dim);
+    padding: 1rem;
+    background: var(--bg-panel);
+    transition: border-color 0.2s, box-shadow 0.2s;
+}
+
+.card article:hover {
+    border-top-color: var(--yellow);
+    box-shadow: 0 0 16px #FFE81F22;
+}
+
+.card article h3 {
+    font-size: 0.85rem;
+    letter-spacing: 1px;
+}
+
+.card article p {
+    font-size: 0.8rem;
+    color: #999;
+}
+
+.card article a {
+    font-family: 'Oswald', sans-serif;
+    font-size: 0.75rem;
+    letter-spacing: 1.5px;
+    text-transform: uppercase;
+    margin-top: 0.4rem;
+}
+
+/* ============================
+   Projecten — mobile first
+   ============================ */
+
+#projecten {
+    width: 90%;
+    margin: 0 auto;
+    scroll-margin-top: 80px;
+}
+
+#projecten > p {
+    margin-bottom: 2rem;
+    font-size: 0.95rem;
+}
+
+.project-grid {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+}
+
+.project-card {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0.8rem;
+}
+
+.project-card img {
+    width: 100%;
+    aspect-ratio: 16 / 9;
+    object-fit: cover;
+    border-radius: var(--border-radius);
+    border: 1px solid #333;
+    transition: border-color 0.2s, box-shadow 0.2s;
+}
+
+.project-card img:hover {
+    border-color: var(--yellow);
+    box-shadow: 0 0 20px #FFE81F33;
+}
+
+.project-card h3 {
+    font-size: 0.8rem;
+    text-align: center;
+    color: var(--text);
+    letter-spacing: 1.5px;
+}
+
+/* ============================
+   Reflectie — mobile first
+   ============================ */
+
+#reflectie {
+    width: 90%;
+    margin: 3rem auto 5rem;
+    scroll-margin-top: 80px;
+}
+
+#reflectie h2 {
+    margin-bottom: 2rem;
+}
+
+#reflectie > section {
+    border-left: 2px solid var(--yellow-dim);
+    padding: 0.5rem 0 0.5rem 1.2rem;
+    margin-bottom: 2rem;
+}
+
+#reflectie > section h3 {
+    font-size: 1.1rem;
+    margin-bottom: 0.5rem;
+}
+
+#reflectie > hr {
+    width: 100%;
+    margin: 2.5rem 0;
+}
+
+#reflectie > h3 {
+    font-size: 1.2rem;
+    margin-top: 1.5rem;
+    margin-bottom: 0.5rem;
+}
+
+/* ============================
+   Footer
+   ============================ */
+
+footer {
+    text-align: center;
+    padding: 2.5rem 1.5rem;
+    border-top: 1px solid #111;
+    color: #555;
+    font-family: 'Oswald', sans-serif;
+    font-size: 0.75rem;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+}
+
+/* ============================
+   Tablet — min-width: 600px
+   ============================ */
+
+@media (min-width: 600px) {
+    .cards {
+        grid-template-columns: 1fr 1fr;
+    }
+
+    .project-grid {
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    .project-card {
+        align-items: center;
+        width: calc(50% - 1rem);
+    }
+
+    .project-card img {
+        width: 100%;
+        aspect-ratio: 16 / 9;
+    }
+}
+
+/* ============================
+   Desktop — min-width: 900px
+   ============================ */
+
+@media (min-width: 900px) {
+    nav {
+        padding: 0 3rem;
+    }
+
+    nav ul {
+        justify-content: flex-end;
+        height: 3.5rem;
+        padding: 0;
+        flex-wrap: nowrap;
+    }
+
+    nav li a {
+        padding: 0 1.4rem;
+        height: 3.5rem;
+        line-height: 3.5rem;
+        font-size: 0.85rem;
+        letter-spacing: 2px;
+    }
+
+    header {
+        padding: 8rem 2rem 5rem;
+        gap: 2.5rem;
+    }
+
+    header img {
+        height: 180px;
+    }
+
+    hr {
+        width: 70%;
+        margin: 6rem auto;
+    }
+
+    h2 {
+        font-size: 2.8rem;
+        letter-spacing: 4px;
+    }
+
+    #over-mij {
+        width: 70%;
+        flex-direction: row;
+        align-items: flex-start;
+        gap: 5%;
+        margin: 4rem auto;
+    }
+
+    #over-mij p {
+        font-size: 1.15rem;
+        flex: 1;
+    }
+
+    #weekly-nerds {
+        width: 70%;
+    }
+
+    .cards {
+        grid-template-columns: repeat(3, 1fr);
+        column-gap: 1.5rem;
+        row-gap: 3rem;
+    }
+
+    #projecten {
+        width: 70%;
+    }
+
+    .project-card {
+        width: auto;
+    }
+
+    .project-card img {
+        width: auto;
+        height: 18dvw;
+        aspect-ratio: 1 / 1;
+    }
+
+    #reflectie {
+        width: 70%;
+        margin: 4rem auto 6rem;
+    }
+
+    .popover.desktop {
+        width: 75dvw;
+        height: auto;
+        aspect-ratio: 16 / 9;
+    }
+
+    .popover.phone {
+        width: min(380px, 85dvw);
+        height: auto;
+        aspect-ratio: 9 / 16;
+    }
+
+    .close-btn {
+        top: -2.4rem;
+        font-size: 0.75rem;
+        padding: 6px 14px;
+    }
+}

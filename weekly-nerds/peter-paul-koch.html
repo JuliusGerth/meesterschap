@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Weekly Nerd #2 — Peter-Paul Koch</title>
+    <link rel="stylesheet" href="../style.css">
+    <link rel="stylesheet" href="nerd.css">
+</head>
+<body>
+
+    <nav>
+        <ul>
+            <li><a href="../index.html#over-mij">Over mij →</a></li>
+            <li><a href="../index.html#weekly-nerds">Weekly Nerds →</a></li>
+            <li><a href="../index.html#projecten">Projecten →</a></li>
+            <li><a href="../index.html#reflectie">Leerdoelen & Reflectie →</a></li>
+        </ul>
+    </nav>
+
+    <main class="nerd-page">
+
+        <a class="back-link" href="../index.html#weekly-nerds">← Terug naar Weekly Nerds</a>
+
+        <header class="nerd-header">
+            <p class="nerd-nummer">Weekly Nerd #2</p>
+            <h1>Peter-Paul Koch</h1>
+            <p class="nerd-meta">Browsers & Support Detection</p>
+        </header>
+
+        <article class="nerd-content">
+
+            <section>
+                <h2>Wat is een browser?</h2>
+                <p>Een browser bestaat uit de volgende lagen:</p>
+                <ol>
+                    <li>HTML</li>
+                    <li>CSS</li>
+                    <li>DOM (Document Object Model)</li>
+                    <li>AOM (Accessibility Object Model)</li>
+                    <li>Interface</li>
+                    <li>JavaScript engine (als aparte component)</li>
+                </ol>
+                <p>In theorie is het mogelijk om dezelfde browser te hebben met een andere JS engine. Een <strong>parser</strong> is een stukje programma dat een string neemt en analyseert wat er binnen die string staat — dit geldt voor HTML, CSS én JavaScript.</p>
+            </section>
+
+            <section>
+                <h2>Rendering Engine</h2>
+                <p>De rendering engine is verantwoordelijk voor HTML en CSS parsing en rendering, en voor de constructie van de DOM en AOM trees. De interface en de JS engine vallen hier buiten.</p>
+            </section>
+
+            <section>
+                <h2>Core vs DOM</h2>
+                <ul>
+                    <li><strong>Core:</strong> wat JavaScript een programmeertaal maakt</li>
+                    <li><strong>DOM:</strong> de manier waarop JS delen van de HTML-pagina kan lezen en aanpassen</li>
+                </ul>
+            </section>
+
+            <section>
+                <h2>Render Blocking</h2>
+                <p>Render blocking betekent dat de browser wacht totdat bepaalde bestanden volledig zijn geladen voordat de pagina wordt gerenderd. CSS en JS (tenzij <code>async</code> of <code>defer</code>) zijn render-blocking.</p>
+
+                <h3>Defer vs Async</h3>
+                <pre><code>&lt;!-- Laad nu --&gt;
+&lt;script src="..."&gt;&lt;/script&gt;
+
+&lt;!-- Laad later (in volgorde) --&gt;
+&lt;script defer src="..."&gt;&lt;/script&gt;
+
+&lt;!-- Het maakt me niet uit wanneer --&gt;
+&lt;script async src="..."&gt;&lt;/script&gt;</code></pre>
+            </section>
+
+            <section>
+                <h2>Backward Compatibility</h2>
+                <p>Als iets ooit heeft gewerkt in een browser, moet het op iedere browser ondersteund blijven worden. Dit is het "contract" van het web. Het is dan ook slim om media queries en container queries te gebruiken in plaats van de layout te vaak te veranderen.</p>
+            </section>
+
+            <section>
+                <h2>Browsergeschiedenis</h2>
+                <p>Een tijdlijn van de belangrijkste browsers:</p>
+                <ul>
+                    <li><strong>Mosaic</strong> — 1993</li>
+                    <li><strong>Netscape</strong> — 1994 (eerste echte browser)</li>
+                    <li><strong>Internet Explorer</strong> — 1995</li>
+                    <li><strong>Opera</strong> — 1995 (beste CSS-ondersteuning, maar klein marktaandeel)</li>
+                    <li><strong>IE 5 Mac</strong> — 2000</li>
+                    <li><strong>Konqueror</strong> — 2000 (rendering engine later opgekocht door Apple)</li>
+                    <li><strong>Safari</strong> — 2003</li>
+                    <li><strong>Firefox</strong> — 2004 (opvolger van Netscape)</li>
+                    <li><strong>Safari iOS</strong> — 2007</li>
+                    <li><strong>Chrome</strong> — 2008</li>
+                    <li><strong>Flow</strong> — 2020 (eigen browser)</li>
+                    <li><strong>Ladybird</strong> — 2024</li>
+                    <li><strong>Igalia</strong> — geen eigen browser, maar groot in open source bijdragen</li>
+                </ul>
+                <p>Verder te verkennen: <a href="https://worldwideweb.cern.ch/browser/" target="_blank" rel="noopener">CERN 2019 WorldWideWeb Rebuild</a></p>
+            </section>
+
+        </article>
+
+    </main>
+
+    <footer>
+        <p>Julius Gerth — CMD Amsterdam 2026</p>
+    </footer>
+
+</body>
+</html>

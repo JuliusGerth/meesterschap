@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Weekly Nerd #1 — Nils Binder</title>
+    <link rel="stylesheet" href="../style.css">
+    <link rel="stylesheet" href="nerd.css">
+</head>
+<body>
+
+    <nav>
+        <ul>
+            <li><a href="../index.html#over-mij">Over mij →</a></li>
+            <li><a href="../index.html#weekly-nerds">Weekly Nerds →</a></li>
+            <li><a href="../index.html#projecten">Projecten →</a></li>
+            <li><a href="../index.html#reflectie">Leerdoelen & Reflectie →</a></li>
+        </ul>
+    </nav>
+
+    <main class="nerd-page">
+
+        <a class="back-link" href="../index.html#weekly-nerds">← Terug naar Weekly Nerds</a>
+
+        <header class="nerd-header">
+            <p class="nerd-nummer">Weekly Nerd #1</p>
+            <h1>Nils Binder</h1>
+            <p class="nerd-meta">CSS Days 2023 — Web Development & Creative Coding</p>
+        </header>
+
+        <article class="nerd-content">
+
+            <section>
+                <h2>Wie is Nils Binder?</h2>
+                <p>Nils Binder werkt binnen drie units: communication design, product development (de grootste) en de web development unit waar hij zelf actief in is. Naast zijn werk als front-end developer werkt hij ook als UX designer, waarbij hij onder andere een app heeft gemaakt voor een voetbalclub.</p>
+            </section>
+
+            <section>
+                <h2>CSS Days 2023</h2>
+                <p>Nils nam ons mee door een aantal inspirerende talks van CSS Days 2023:</p>
+                <ul>
+                    <li><strong>Tinkering by Night</strong> — Sanne</li>
+                    <li><strong>Creative Coding</strong> — Jhey Topkins</li>
+                    <li><strong>Personal Website</strong> — Sophie Kooning</li>
+                    <li><strong>Building Components</strong> — Stephanie Eckles</li>
+                    <li><strong>Structuring & Restructuring</strong> — Manuel Matuzovic</li>
+                    <li><strong>Selector Performance</strong> — Patrick Brosset</li>
+                </ul>
+            </section>
+
+            <section>
+                <h2>Van Photoshop naar Figma naar AI</h2>
+                <p>Vroeger gebruikte iedereen Photoshop om een website te ontwerpen, nu is er een overstap gemaakt naar Figma. Figma lijkt meer op hoe je met CSS werkt waardoor designers minder onmogelijke dingen ontwerpen. De nieuwe "holy triangle van saai" is: Figma → Tailwind → AI.</p>
+                <p>Tip: kijk niet naar pixels maar naar de verhouding tussen elementen. Gebruik hiervoor een grid.</p>
+            </section>
+
+            <section>
+                <h2>CSS technieken</h2>
+
+                <h3>CSS Grid met fr units</h3>
+                <pre><code>.class {
+    display: grid;
+    grid-template-columns: 2fr 3fr auto 1fr;
+}
+
+h1 {
+    grid-column: 2 / 4;
+}
+
+p {
+    grid-column: 3 / 4;
+}</code></pre>
+                <p>Het grid past zich aan aan de grootte van het scherm.</p>
+
+                <h3>Stop-motion animatie</h3>
+                <pre><code>animation: stop-motion 3s steps(31, end) infinite;</code></pre>
+                <p>De animatie is opgebouwd uit meerdere afbeeldingen in een lange strip met 31 fases. Door <code>steps()</code> te gebruiken in plaats van <code>linear</code> krijg je een stop-motion effect.</p>
+
+                <h3>Mix-blend-mode</h3>
+                <pre><code>mix-blend-mode: difference;</code></pre>
+                <p>Inverteert de kleuren ten opzichte van de achtergrond.</p>
+
+                <h3>Subgrid</h3>
+                <pre><code>grid-template-rows: subgrid;</code></pre>
+                <p>Hiermee kunnen geneste elementen aansluiten op het parent grid.</p>
+
+                <h3>View Transitions</h3>
+                <p>Met View Transitions kun je een animatie toevoegen bij het navigeren naar een andere pagina. Als twee elementen dezelfde <code>view-transition-name</code> hebben, worden ze geanimeerd bij de overgang.</p>
+            </section>
+
+        </article>
+
+    </main>
+
+    <footer>
+        <p>Julius Gerth — CMD Amsterdam 2026</p>
+    </footer>
+
+</body>
+</html>

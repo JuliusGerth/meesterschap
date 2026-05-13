@@ -281,6 +281,14 @@ a:hover {
     text-decoration: underline;
 }
 
+.reflectie {
+    font-size: 0.8rem;
+    color: var(--text);
+    opacity: 0.65;
+    margin: 0;
+    line-height: 1.5;
+}
+
 .popover.desktop {
     width: 95dvw;
     height: 82dvh;
@@ -461,6 +469,52 @@ a:hover {
 }
 
 /* ============================
+   Leerdoelen — mobile first
+   ============================ */
+
+#leerdoelen {
+    width: 90%;
+    margin: 3rem auto;
+    scroll-margin-top: 80px;
+}
+
+#leerdoelen h2 {
+    margin-bottom: 2rem;
+}
+
+#leerdoelen > section {
+    display: flex;
+    flex-direction: column;
+    gap: 0.6rem;
+    background: var(--bg-panel);
+    border: 1px solid #ffffff0d;
+    border-top: 3px solid var(--yellow-dim);
+    padding: 1.4rem 1.4rem 1.4rem 1.8rem;
+    margin-bottom: 1.2rem;
+    cursor: default;
+    transition: border-top-color 0.2s, box-shadow 0.2s, background 0.2s, transform 0.2s;
+}
+
+#leerdoelen > section:hover {
+    border-top-color: var(--yellow);
+    background: #0f0f1a;
+    box-shadow: 0 0 32px #FFE81F28, inset 0 0 40px #FFE81F08;
+    transform: translateX(6px);
+}
+
+#leerdoelen > section h3 {
+    font-size: 0.95rem;
+    color: var(--yellow);
+    letter-spacing: 2px;
+}
+
+#leerdoelen > section p {
+    font-size: 0.9rem;
+    line-height: 1.9;
+    color: var(--text);
+}
+
+/* ============================
    Reflectie — mobile first
    ============================ */
 
@@ -608,13 +662,17 @@ footer {
     }
 
     .project-card {
-        width: auto;
+        width: 18dvw;
     }
 
     .project-card img {
-        width: auto;
+        width: 100%;
         height: 18dvw;
         aspect-ratio: 1 / 1;
+    }
+
+    #leerdoelen {
+        width: 70%;
     }
 
     #reflectie {

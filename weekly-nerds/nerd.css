@@ -125,6 +125,25 @@
     color: var(--yellow);
 }
 
+.nerd-figure {
+    margin: 1.5rem 0;
+}
+
+.nerd-figure img {
+    width: 100%;
+    height: auto;
+    display: block;
+    border: 1px solid #333;
+    border-radius: var(--border-radius);
+}
+
+.nerd-figure figcaption {
+    margin-top: 0.6rem;
+    font-size: 0.85rem;
+    font-style: italic;
+    color: #888;
+}
+
 @media (max-width: 768px) {
     .back-link {
         margin-left: 5%;

@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Weekly Nerd #8 — Voorhoede</title>
+    <link rel="stylesheet" href="../style.css">
+    <link rel="stylesheet" href="nerd.css">
+</head>
+<body>
+
+    <nav>
+        <ul>
+            <li><a href="../index.html#over-mij">Over mij →</a></li>
+            <li><a href="../index.html#weekly-nerds">Weekly Nerds →</a></li>
+            <li><a href="../index.html#projecten">Projecten →</a></li>
+            <li><a href="../index.html#reflectie">Leerdoelen & Reflectie →</a></li>
+        </ul>
+    </nav>
+
+    <main class="nerd-page">
+
+        <a class="back-link" href="../index.html#weekly-nerds">← Terug naar Weekly Nerds</a>
+
+        <header class="nerd-header">
+            <p class="nerd-nummer">Weekly Nerd #8</p>
+            <h1>Voorhoede</h1>
+            <p class="nerd-meta">Headless CMS, design systems, toegankelijkheid & offline-first</p>
+        </header>
+
+        <article class="nerd-content">
+
+            <section>
+                <h2>De rol van Voorhoede</h2>
+                <p>Voorhoede zijn van zichzelf geen designers, maar je kunt nog steeds input geven over dingen die gaaf kunnen zijn. Het draait erom dat je je aanpast aan de klant.</p>
+            </section>
+
+            <section>
+                <h2>Content & CMS</h2>
+                <ul>
+                    <li><strong>Headless CMS</strong> — een CMS dat alleen de content beheert, los van de front-end.</li>
+                    <li><strong>Data CMS</strong> — content als gestructureerde data die je via een API ophaalt.</li>
+                </ul>
+            </section>
+
+            <section>
+                <h2>Techniek & effecten</h2>
+                <p>Met <code>mix-blend-mode</code> in CSS kun je met weinig moeite mooie effecten maken.</p>
+                <p>Het <code>&lt;ruby&gt;</code>-element is een HTML-element dat oorspronkelijk uit het Japans komt, om uitspraak of annotatie boven tekst te tonen.</p>
+            </section>
+
+            <section>
+                <h2>Design systems & toegankelijkheid</h2>
+                <p>Het <strong>NL Design System</strong> is een gedeelde basis met componenten en richtlijnen voor (overheids)websites. Belangrijke vraag daarbij: wat is digitale toegankelijkheid eigenlijk, en hoe zorg je dat iedereen je site kan gebruiken?</p>
+                <p>Met <strong>Token Studio in Figma</strong> beheer je design tokens (kleuren, spacing, typografie) direct in je design en koppel je ze aan de code.</p>
+            </section>
+
+            <section>
+                <h2>Offline-first design</h2>
+                <p>Een <strong>PWA (Progressive Web App)</strong> en een offline-first aanpak zorgen ervoor dat je app blijft werken zonder verbinding. Je start bij "geen verbinding", slaat lokaal op en synct later wanneer er weer internet is.</p>
+
+                <figure class="nerd-figure">
+                    <img src="../images/voorhoede/offline-first-design.jpeg" alt="Slide over offline-first design met kernprincipes, gebruikersvoordelen, uitdagingen en wanneer kiezen.">
+                    <figcaption>Offline-first design: kernprincipes, gebruikersvoordelen, uitdagingen & oplossingen en wanneer je ervoor kiest.</figcaption>
+                </figure>
+
+                <h3>Voordelen voor de gebruiker</h3>
+                <ul>
+                    <li>Altijd toegang, ook in het vliegtuig of buitengebied.</li>
+                    <li>Snellere interface zonder wachttijd.</li>
+                    <li>Besparing op data en batterij.</li>
+                </ul>
+
+                <h3>Uitdagingen</h3>
+                <ul>
+                    <li>Conflictbeheer — wie heeft de autoriteit als data botst?</li>
+                    <li>Slimme caching & data pruning.</li>
+                    <li>Duidelijke sync-status als feedback naar de gebruiker.</li>
+                </ul>
+
+                <p>Je kiest hiervoor bij slechte connectiviteit, wanneer kritieke data-toegang vereist is, of voor productiviteits- en field tools.</p>
+
+                <figure class="nerd-figure">
+                    <img src="../images/voorhoede/sync-flow.jpeg" alt="Diagram: user device naar local storage (IndexedDB / local DB), via sync layer naar cloud server.">
+                    <figcaption>De data-flow: lokaal opslaan (IndexedDB / local DB) en via een sync layer syncen met de cloud zodra je online bent.</figcaption>
+                </figure>
+            </section>
+
+            <section>
+                <h2>Essentiële webtechnologie</h2>
+
+                <figure class="nerd-figure">
+                    <img src="../images/voorhoede/essentiele-webtechnologie.jpeg" alt="Slide over service workers & caching, local storage & databases en synchronisatieframeworks.">
+                    <figcaption>De drie lagen: interceptie (Service Workers), opslag (IndexedDB) en synchronisatie.</figcaption>
+                </figure>
+
+                <ul>
+                    <li><strong>Service Workers & Caching</strong> — een tussenlaag voor netwerkverzoeken. Gebruik "cache-first" voor statische assets en "network-first" voor dynamische data.</li>
+                    <li><strong>Local Storage & Databases</strong> — IndexedDB voor complexe structuren, localStorage voor simpele key-values. Libraries zoals RxDB, Dexie en PouchDB helpen daarbij.</li>
+                    <li><strong>Synchronisatieframeworks (optioneel)</strong> — Firebase Firestore, AWS AppSync of Realm automatiseren het wachtrijen en de dataconsistentie tussen lokaal en de cloud. (Vaak doen we dit alsnog gewoon met een API.)</li>
+                </ul>
+            </section>
+
+            <section>
+                <h2>Implementatie best practices</h2>
+
+                <figure class="nerd-figure">
+                    <img src="../images/voorhoede/implementatie-best-practices.jpeg" alt="Slide met implementatie best practices voor offline-first: progressive enhancement, background sync, cache invalidation, error handling en performance.">
+                    <figcaption>Robuuste offline-first implementaties rusten op betrouwbare caching, slimme synchronisatie en duidelijke foutafhandeling.</figcaption>
+                </figure>
+
+                <ul>
+                    <li><strong>Progressive Enhancement</strong> — start met basisfunctionaliteit die offline werkt, voeg geavanceerde features toe bij verbinding.</li>
+                    <li><strong>Background Sync</strong> — laat de app synchroniseren zodra de verbinding herstelt, zonder de gebruiker te storen.</li>
+                    <li><strong>Cache Invalidation</strong> — gebruik tijd- en versiegebaseerde invalidatie; pas ETags en headers toe voor dataversheid.</li>
+                    <li><strong>Error Handling & Retries</strong> — implementeer "exponential backoff" voor retries en communiceer de sync-status transparant.</li>
+                    <li><strong>Performance Optimization</strong> — minimaliseer opslag-reads, batch sync-operaties en gebruik lazy-loading voor niet-kritieke assets.</li>
+                </ul>
+            </section>
+
+        </article>
+
+    </main>
+
+    <footer>
+        <p>Julius Gerth — CMD Amsterdam 2026</p>
+    </footer>
+
+</body>
+</html>

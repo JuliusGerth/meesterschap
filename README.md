@@ -54,3 +54,13 @@ links staan ook als comment direct bij de betreffende code in `style.css` en
 | `clamp()` voor responsive (mee-schalende) typografie | `header h1` in `style.css` | [MDN — clamp()](https://developer.mozilla.org/en-US/docs/Web/CSS/clamp) |
 | `backdrop-filter` voor het glaseffect in de navigatie | `nav` in `style.css` | [MDN — backdrop-filter](https://developer.mozilla.org/en-US/docs/Web/CSS/backdrop-filter) |
 | `dataset` om `data-*` attributen uit te lezen voor de project-popover | `script.js` | [MDN — HTMLElement.dataset](https://developer.mozilla.org/en-US/docs/Web/API/HTMLElement/dataset) |
+
+### Fonts
+
+De lettertypen komen van Google Fonts en worden geïmporteerd bovenaan
+`style.css`.
+
+| Font | Gebruikt voor | Bron |
+| --- | --- | --- |
+| Oswald | Koppen, navigatie en knoppen | [Google Fonts — Oswald](https://fonts.google.com/specimen/Oswald) |
+| Raleway | Lopende tekst | [Google Fonts — Raleway](https://fonts.google.com/specimen/Raleway) |

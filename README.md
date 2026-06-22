@@ -57,10 +57,12 @@ links staan ook als comment direct bij de betreffende code in `style.css` en
 
 ### Fonts
 
-De lettertypen komen van Google Fonts en worden geïmporteerd bovenaan
-`style.css`.
+De lettertypen worden geïmporteerd bovenaan `style.css` via
+[Bunny Fonts](https://fonts.bunny.net) — een privacy-/GDPR-vriendelijke
+vervanger van Google Fonts met exact dezelfde (open-source) lettertypen, zodat
+er geen data naar Google gaat.
 
 | Font | Gebruikt voor | Bron |
 | --- | --- | --- |
-| Oswald | Koppen, navigatie en knoppen | [Google Fonts — Oswald](https://fonts.google.com/specimen/Oswald) |
-| Raleway | Lopende tekst | [Google Fonts — Raleway](https://fonts.google.com/specimen/Raleway) |
+| Oswald | Koppen, navigatie en knoppen | [Bunny Fonts — Oswald](https://fonts.bunny.net/family/oswald) |
+| Raleway | Lopende tekst | [Bunny Fonts — Raleway](https://fonts.bunny.net/family/raleway) |

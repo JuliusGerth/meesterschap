@@ -38,32 +38,40 @@
 
 @media (prefers-color-scheme: light) {
     :root {
-        --accent: #1f6feb;
-        --accent-dim: #1856b8;
-        --bg: #e9eef6;
-        --bg-panel: #ffffff;
-        --bg-panel-hover: #f3f7ff;
-        --text: #2a2f3a;
-        --text-muted: #6b7280;
-        --text-bright: #0b1220;
-        --panel-border: #00000014;
-        --panel-border-soft: #0000000d;
-        --panel-border-strong: #cdd5e0;
-        --nav-bg: rgba(255, 255, 255, 0.9);
-        --overlay-bg: rgba(20, 30, 50, 0.45);
-        --footer-border: #d7dee8;
-        --footer-text: #8a93a3;
-        --scrollbar-track: #d7dee8;
-        --glow: 0 0 6px #4a9eff, 0 0 18px color-mix(in srgb, var(--accent) 53%, transparent);
-        --glow-soft: 0 0 4px color-mix(in srgb, var(--accent) 33%, transparent),
-                     0 0 10px color-mix(in srgb, var(--accent) 20%, transparent);
-        /* Zelfde sterrenveld als dark mode, maar donkerblauwe sterren
-           op een diepere blauwe hemel zodat de ruimtesfeer terugkomt. */
+        /* Light Side, heroverwogen: geen daglicht-hemel maar een
+           schemering/nevel — diep indigo dat overgaat in paars, met
+           een lichtsabel-blauwe accent. Ruimtesfeer i.p.v. wit. */
+        --accent: #5b9dff;
+        --accent-dim: #3f7fe0;
+        --bg: #1b2342;
+        --bg-panel: rgba(40, 52, 96, 0.45);
+        --bg-panel-hover: rgba(56, 70, 124, 0.6);
+        --text: #d7ddf0;
+        --text-muted: #97a3c7;
+        --text-bright: #ffffff;
+        --panel-border: #ffffff1a;
+        --panel-border-soft: #ffffff12;
+        --panel-border-strong: #ffffff33;
+        --nav-bg: rgba(20, 26, 52, 0.82);
+        --overlay-bg: rgba(8, 12, 28, 0.6);
+        --footer-border: #ffffff14;
+        --footer-text: #7d88ac;
+        --scrollbar-track: #2a3358;
+        --glow: 0 0 6px var(--accent), 0 0 18px color-mix(in srgb, var(--accent) 60%, transparent),
+                0 0 40px color-mix(in srgb, var(--accent-dim) 35%, transparent);
+        --glow-soft: 0 0 4px color-mix(in srgb, var(--accent) 45%, transparent),
+                     0 0 12px color-mix(in srgb, var(--accent) 25%, transparent);
+        /* Heldere sterren op de schemerhemel, net als dark mode. */
         --star-display: block;
-        --star-bright: #2a3a63;
-        --star-mid: #2a3a63aa;
-        --star-dim: #2a3a6360;
-        --page-gradient: radial-gradient(130% 90% at 50% -10%, #aec6e8 0%, #c2d3ec 45%, #d2deef 100%);
+        --star-bright: #ffffff;
+        --star-mid: #ffffffcc;
+        --star-dim: #ffffff66;
+        /* Nevel: paarse gloed linksboven, blauwe gloed rechtsonder,
+           op een diep indigo veld. */
+        --page-gradient:
+            radial-gradient(120% 80% at 15% -5%, color-mix(in srgb, #7b4ad6 55%, transparent) 0%, transparent 55%),
+            radial-gradient(110% 90% at 90% 110%, color-mix(in srgb, #2f6bd6 50%, transparent) 0%, transparent 55%),
+            linear-gradient(170deg, #232c52 0%, #1b2342 45%, #161c38 100%);
     }
 }
 

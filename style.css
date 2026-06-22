@@ -26,6 +26,8 @@
     --footer-text: #555;
     --scrollbar-track: #222;
     --glow: 0 0 6px var(--accent), 0 0 20px var(--accent), 0 0 40px var(--accent-dim);
+    /* color-mix() mengt het accent met transparant voor zachte gloed:
+       https://developer.mozilla.org/en-US/docs/Web/CSS/color_value/color-mix */
     --glow-soft: 0 0 4px color-mix(in srgb, var(--accent) 53%, transparent),
                  0 0 12px color-mix(in srgb, var(--accent) 27%, transparent);
     --star-display: block;
@@ -102,6 +104,8 @@ body {
     transition: background-color 0.4s, color 0.4s;
 }
 
+/* Sterrenveld opgebouwd uit tientallen kleine radial-gradients:
+   https://developer.mozilla.org/en-US/docs/Web/CSS/gradient/radial-gradient */
 body::before {
     content: '';
     position: fixed;
@@ -154,6 +158,8 @@ nav {
     background: var(--nav-bg);
     border-bottom: 1px solid var(--accent);
     box-shadow: 0 2px 20px color-mix(in srgb, var(--accent) 13%, transparent);
+    /* backdrop-filter vervaagt wat áchter de balk zit (glaseffect):
+       https://developer.mozilla.org/en-US/docs/Web/CSS/backdrop-filter */
     backdrop-filter: blur(6px);
     padding: 0 1rem;
 }
@@ -206,6 +212,8 @@ header {
 header h1 {
     font-family: 'Oswald', sans-serif;
     font-weight: 700;
+    /* clamp() schaalt de tekst mee met het scherm tussen een min en max:
+       https://developer.mozilla.org/en-US/docs/Web/CSS/clamp */
     font-size: clamp(1.2rem, 6vw, 6rem);
     letter-spacing: 4px;
     text-transform: uppercase;

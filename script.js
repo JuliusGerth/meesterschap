@@ -5,6 +5,8 @@ const closeBtn = document.getElementById("close-btn");
 
 document.querySelectorAll(".popover-trigger").forEach((trigger) => {
   trigger.addEventListener("click", () => {
+    // dataset leest de data-type / data-url attributen van de afbeelding uit:
+    // https://developer.mozilla.org/en-US/docs/Web/API/HTMLElement/dataset
     const type = trigger.dataset.type;
     const url = trigger.dataset.url;
 
